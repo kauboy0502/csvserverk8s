@@ -21,7 +21,7 @@ Create the k8s manifest files required for implementing the project on k8s
 
 Once these are created apply the k8s objects using the kubectl apply -f . command 
 
-minikube service <svcname> --url
+minikube service svcname --url
 
 All the k8s objects listed above will be created and then open the node ip with the port exposed on a browser and you will be able to see the application up and running
 
