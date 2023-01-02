@@ -9,10 +9,10 @@ Run the script a.sh with the below command:
 The inputFile will be generated in the same path as the script file
 
 Install minikube on your machine to run a local k8s cluster:
-    * curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-    * sudo install minikube-linux-amd64 /usr/local/bin/minikube
-    * minikube start --driver=docker
-    * kubectl get nodes -o wide
+* curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+* sudo install minikube-linux-amd64 /usr/local/bin/minikube
+* minikube start --driver=docker
+* kubectl get nodes -o wide
     
 Create the k8s manifest files required for implementing the project on k8s
 * Deployment
