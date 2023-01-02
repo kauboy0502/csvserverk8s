@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp
+spec:
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+      - name: myapp
+        image: infracloudio/csvserver
+        env:
+        - name: CSVSERVER_BORDER
+          value: "Orange"
+        volumeMounts:
+        - mountPath: /csvserver/inputdata
+          name: mnt
+          subPath: file-from-cfgmap
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 9300
+      volumes:
+      - name: mnt
+        configMap:
+          name: ic-cfgmap
+         

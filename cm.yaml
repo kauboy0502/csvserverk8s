@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ic-cfgmap
+data:
+  file-from-cfgmap: |
+    0,6829
+    1,24296
+    2,29489
+    3,14533
+    4,11607
+    5,18366
+    6,4714
+    7,32450
+    8,5069
+    9,10005
+    10,0976
